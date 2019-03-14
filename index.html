@@ -138,6 +138,21 @@
       margin-left: 10px;
     }
 
+#QBcode{
+    position: relative;
+}.QBcode::after {
+    display: none;
+    content: '';
+    background: url(./CV_files/QBcode.jpg) 100%/cover;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 120%;
+    bottom: -170%;
+}
+.QBcode:hover::after{
+    display: block;
+}
     main {
       flex: 1;
       min-height: calc(100vh - 162px);
@@ -286,7 +301,7 @@
           <ul>
             <li>项目介绍： 在微信小程序开发者工具中开发的在线翻译，实现了汉语转英语的功能。 API由百度翻译提供 ，已发布上线，独自开发。</li>
             <li>技术栈：iconfont+wxml+wxss+javascript+es6</li>
-            <li>预览项目: <a href="https://jirengu.com/">点击查看</a></li>
+            <li>预览项目: <a class="github QBcode" href ="javascript:volid(0);" id="QBcode">在线查看</a></li>
           </ul>
         </div>
         <div class="item">
