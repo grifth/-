@@ -28,6 +28,10 @@
       margin-bottom: 10px;
     }
 
+    .item img{
+      width: 460px;
+    }
+
     header {
 
       background: #3c3c3c;
@@ -77,6 +81,7 @@
       padding-bottom: 20px;
     }
 
+    
     section h2 {
       color: #5c99ca;
       font-size: 16px;
@@ -138,27 +143,50 @@
       margin-left: 10px;
     }
 
-#QBcode{
-    position: relative;
-}.QBcode::after {
-    display: none;
-    content: '';
-    background: url(./CV_files/QBcode.jpg) 100%/cover;
-    width: 100px;
-    height: 100px;
-    position: absolute;
-    left: 120%;
-    bottom: -170%;
-}
-.QBcode:hover::after{
-    display: block;
-}
+    #QBcode {
+      position: relative;
+    }
+
+    #QBcode img{
+      width: 80px;
+    }
+
+    main>section:nth-child(1){
+      padding-bottom: 70px;
+    }
+    
+    .test{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .QBcode::after {
+      display: none;
+      content: '';
+      background: url(./CV_files/QBcode.jpg) 100%/cover;
+      width: 100px;
+      height: 100px;
+      position: absolute;
+      left: 120%;
+      bottom: -170%;
+    }
+
+    .QBcode:hover::after {
+      display: block;
+    }
+
     main {
       flex: 1;
       min-height: calc(100vh - 162px);
     }
 
     @media (max-width: 768px) {
+      section h2 {
+    /* align-items: center; */
+    color: #5c99ca;
+    font-size: 16px;
+    text-align: center;
+}
       header {
         padding-top: 20px;
         padding-bottom: 90px;
@@ -187,7 +215,6 @@
       <div class="avatar">
         <img src="./CV_files/TB1W_X6OXXXXXcZXVXXXXXXXXXX-400-400.png" alt="小谷">
       </div>
-
       <section>
         <h2>基础信息</h2>
         <div class="detail personal">
@@ -196,12 +223,8 @@
             <span>大专</span>
           </div>
           <div class="item">
-            <span>工作经验</span>
-            <span>1年</span>
-          </div>
-          <div class="item">
             <span>意向薪资</span>
-            <span>8~10k</span>
+            <span>5~8k</span>
           </div>
         </div>
       </section>
@@ -236,30 +259,28 @@
             <svg>
               <use xlink:href="#icon-phone"></use>
             </svg>
-            <span>1300000000</span>
+            <span>17600597719</span>
           </div>
           <div class="item">
             <svg>
               <use xlink:href="#icon-email"></use>
             </svg>
-            <span>hunger@jirengu.com</span>
+            <span>RingWay1995@gmail.com</span>
           </div>
           <div class="item">
             <svg>
               <use xlink:href="#icon-wechat"></use>
             </svg>
-            <span>xiedaimala01</span>
+            <span>RingWayz</span>
           </div>
           <div class="item">
             <svg>
               <use xlink:href="#icon-city"></use>
             </svg>
-            <span>杭州</span>
+            <span>北京</span>
           </div>
-
         </div>
       </section>
-
     </aside>
     <main>
       <section>
@@ -268,13 +289,13 @@
         <p>了解微信小程序开发</p>
         <p>熟练掌握原生javascript和部分ES6,理解重要概念比如：原型，闭包，作用域链，深拷贝等</p>
         <p>
-            掌握常用的HTML标签，理解语义化标签，DOM结构和操作，熟悉标准DOM事件流。掌握CSS核心概念概念如块级和行内元素,盒模型，文档流，浮动和定位，flex布局。
-         </p>
+          掌握常用的HTML标签，理解语义化标签，DOM结构和操作，熟悉标准DOM事件流。掌握CSS核心概念概念如块级和行内元素,盒模型，文档流，浮动和定位，flex布局。
+        </p>
         <p>能够完成界面整洁，交互友好的页面，高度还原UI视觉稿</p>
         <p>熟练使用jquery常用API，能够使用jQuery进行DOM操作，制作轮播等。</p>
         <p>熟悉 HTTP 协议，了解 HTTP 请求、响应的定义，
-        <p>熟悉CORS、JSONP等常见的跨域方式以及其原理</p>
-        <p>追求良好的代码规范</p>
+          <p>熟悉CORS、JSONP等常见的跨域方式以及其原理</p>
+          <p>追求良好的代码规范</p>
       </section>
 
       <!-- <section>
@@ -289,44 +310,63 @@
         <div class="item">
           <h3>vue技术栈实现cnode社区</h3>
           <ul>
+            <li></li>
+            <img src="./img/cnode.jpg" alt="">
             <li>项目介绍： 基于vue开发的cnode社区，由vue-cli3搭建的单页面应用，使用axios向后台发送请求接收响应， API由cnode社区提供 ，使用vue-router达到跳转路由、传参等操作，
               最终用webpack打包代码，部署在github pages上可在线查看效果。</li>
             <li>技术栈：vue、vue-router、webpack、es6</li>
-            <li>项目源码:<a href="https://github.com/grifth/cnode-">点击查看</a> </li>
-            <li>预览项目: <a href="https://grifth.github.io/cnode-/index.html#/">点击查看</a></li>
-          </ul>
-        </div>
-        <div class="item">
-          <h3>微信小程序：在线翻译</h3>
-          <ul>
-            <li>项目介绍： 在微信小程序开发者工具中开发的在线翻译，实现了汉语转英语的功能。 API由百度翻译提供 ，已发布上线，独自开发。</li>
-            <li>技术栈：iconfont+wxml+wxss+javascript+es6</li>
-            <li>预览项目: <a class="github QBcode" href ="javascript:volid(0);" id="QBcode">在线查看</a></li>
+            <li>项目源码:<a href="https://github.com/grifth/cnode-">https://github.com/grifth/cnode-</a> </li>
+            <li>预览项目: <a href="https://grifth.github.io/cnode-/index.html#/">https://grifth.github.io/cnode-/index.html#/</a></li>
           </ul>
         </div>
         <div class="item">
           <h3>网易云音乐(手机端)</h3>
           <ul>
+            <li></li>
+            <img src="./img/163.jpg" alt="">
             <li>项目介绍： 手机端网易云音乐，具备播放、暂停的功能，使用leancloud作为数据库</li>
             <li>技术栈：JQuery + BOM + MVC + Leancloud + EventHub</li>
-            <li>项目源码:<a href="https://github.com/grifth/163music">点击查看</a></li>
-            <li>预览项目: <a href="https://grifth.github.io/163music/">点击查看</a></li>
+            <li>项目源码:<a href="https://github.com/grifth/163music">https://github.com/grifth/163music</a></li>
+            <li>预览项目: <a href="https://grifth.github.io/163music/">https://grifth.github.io/163music/</a></li>
           </ul>
         </div>
         <div class="item">
-            <h3>手机端豆瓣电影</h3>
+          <h3>手机端豆瓣电影</h3>
+          <ul>
+              <li></li>
+              <img src="./img/douban.jpg" alt="">
+            <li>项目介绍： 利用豆瓣提供的免费API完成，可以获取豆瓣电影Top250的电影以及搜索电影的功能</li>
+            <li>技术栈：Jquery + MVC + ES6 + EventHub</li>
+            <li>项目源码:<a href="https://github.com/grifth/douban">https://github.com/grifth/douban</a></li>
+            <li>预览项目: <a href="https://grifth.github.io/douban/">https://grifth.github.io/douban/</a></li>
+          </ul>
+        </div>
+        <div class="item">
+            <h3>在线键盘导航</h3>
             <ul>
-              <li>项目介绍： 利用豆瓣提供的免费API完成，可以获取豆瓣电影Top250的电影以及搜索电影的功能</li>
-              <li>技术栈：Jquery + MVC + ES6 + EventHub</li>
-              <li>项目源码:<a href="https://github.com/grifth/douban">点击查看</a></li>
-              <li>预览项目: <a href="https://grifth.github.io/douban/">点击查看</a></li>
+              <li></li>
+              <img src="./img/keyBoardNav.jpg" alt="">
+              <li>项目介绍： 一个优美快捷的个人导航页，附加主流搜索引擎搜索功能 为键盘上的 26 个字母绑定了导航网址，敲击键盘上的字母可跳转相应网页 可以自定义每个键绑定的导航网址，数据存在本地LocalStorage中 基于原生 JS，键盘按键动态生成，按键样式完全使用CSS3完成
+                </li>
+              <li>技术栈：javascript+html+css</li>
+              <li>预览项目:</li>
+              <li>项目源码:<a href="https://github.com/grifth/keyBoard-Nav">https://github.com/grifth/keyBoard-Nav</a></li>
+              <li>预览项目: <a href="https://grifth.github.io/keyBoard-Nav/">https://grifth.github.io/keyBoard-Nav/</a></li>
             </ul>
           </div>
   
-      </section>
-      <section>
-        <h2>个人评价</h2>
-        <p>痴迷新技术，喜欢承担有技术难度的工作，爱分享，善于知识总结梳理</p>
+        <div class="item">
+          <h3>微信小程序：在线翻译</h3>
+          <ul>
+            <li></li>
+            <img src="./img/translate.jpg" alt="">
+            <li>项目介绍： 在微信小程序开发者工具中开发的在线翻译，实现了汉语转英语的功能。 API由百度翻译提供 ，已发布上线，独自开发。</li>
+            <li>技术栈：iconfont+wxml+wxss+javascript+es6</li>
+            <li>预览项目:</li>
+            <li> <a class="github QBcode" href="javascript:volid(0);" id="QBcode"><img src="./CV_files/QBcode.jpg" alt=""></a></li>
+          </ul>
+        </div>
+
       </section>
     </main>
   </div>
